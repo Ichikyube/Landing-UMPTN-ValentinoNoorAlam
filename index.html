@@ -56,7 +56,7 @@
                     <p class="card-text leading-7 text-sm text-center text-gray-600">Rekrutment Software Developer
                         untuk far capital Malaysia dengan stack yang diujikan PHP dan Nodejs</p>
                     <div class="flex items-center flex-row flex justify-center ">
-                        <button
+                        <button id="DaftarBtn2" onclick="shake()"
                             class="z-10 relative items-center justify-center rounded-md hover:bg-rose-900 transition-all font-medium 2xl:px-6 2xl:py-3.5 px-5 py-3 
                         overflow-hidden inline-flex whitespace-nowrap text-black border-solid border-2 border-black">Daftar
                             Sekarang</button>
@@ -70,7 +70,6 @@
 <script>
     function shake() {
         const daftarBtn = document.getElementById("DaftarBtn");
-        //alert("***Terima Kasih***")
         daftarBtn.remove();
         const node = document.createElement("p");
         node.classList.add("relative", "items-center", "inline-flex", "justify-center", "font-medium", "2xl:px-6", "2xl:py-3.5", "shakey",
@@ -80,7 +79,7 @@
         node.appendChild(textnode);
         document.getElementById("Daftar").appendChild(node);
         setTimeout(function(){ node.innerHTML = "Sudah Terdaftar"; }, 600);
-        
+        document.getElementById("DaftarBtn2").innerHTML = "Sudah Terdaftar";
     }
 </script>
 </html>
