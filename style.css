@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .a_Btn {
+        @apply 
+    }
+}
+.shakey {
+    animation: shakeY 1s;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 3px #9196bc;
+    transition: text-shadow 5s, color 5s;
+}
+.shake {
+    animation-name: shakeY;
+    -webkit-animation-name: shakeY;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+  
+@keyframes shakeY {
+    from {
+      color:black;
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    },
+    to {
+      color: #FFFFFF;
+      transform: translate3d(0, 0, 0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translate3d(0, -10px, 0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translate3d(0, 10px, 0);
+    }
+}
+  
