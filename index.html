@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="umptn-dark.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="fadeIn()">
     <div class="container px-5 py-8 mx-auto items-center">
         <header id="header" class="px-5 py-24 mx-auto text-gray-600 body-font">
             <div id="title" class="flex flex-col md:pr-10 md:mb-0 mb-6 pr-0 w-full md:w-auto md:text-left text-center">
@@ -20,18 +20,17 @@
                     <h2 class="text-xs text-center text-grey-500 tracking-widest font-medium title-font mb-1">Pendaftaran Ujian Masuk Perusahaan Teknologi Nasional Dibuka</h2>
                 </div><br><br>
                 <div id="Daftar" class="items-center text-center">
-                    <button name="Daftar" id="DaftarBtn" onclick="shake()" class="relative items-center inline-flex whitespace-nowrap items-center justify-center rounded-md transition-all font-medium 2xl:px-6 2xl:py-3.5 px-5 py-3 
-                    text-xs text-center flex-shrink-0 text-black py-2 px-4 ease-out duration-1000 hover:drop-shadow-xl hover:shadow-cyan-900/50 hover:bg-blue-50 transition-all rounded text-lg mt-10 sm:mt-0 text-shadow" href="" role="button">Daftar
+                    <button name="Daftar" id="DaftarBtn" onclick="shake()" class="relative items-center inline-flex whitespace-nowrap justify-center font-medium 2xl:px-6 2xl:py-3.5 px-5 py-3 
+                     text-center flex-shrink-0 text-black ease-out duration-1000 hover:drop-shadow-xl hover:shadow-cyan-900/50 hover:bg-blue-50 transition-all rounded text-lg mt-10 sm:mt-0 text-shadow" href="" role="button">Daftar
                         Sekarang</button>
                 </div>
-
-                <br><br><br><br>
+                <br><br>
             </div>
         </header>
         
         <section id="Content" class="container px-auto mx-auto flex justify-center flex-auto items-center">
             <figure class="figure relative items-center content-center justify-center justify-items-center">
-                <img src="img/i12.png" class="w-full object-cover rounded-2xl overflow-hidden h-[358px] sm:h-[468px] lg:h-[522px] mx-auto figure-img max-w-full h-auto place-self-center justify-self-center self-center rounded-lg" alt="...">
+                <img src="img/i12.png" class="w-full object-cover overflow-hidden sm:h-[468px] lg:h-[522px] mx-auto figure-img max-w-full h-auto place-self-center justify-self-center self-center rounded-lg" alt="...">
             </figure>
         </section>
         <section class="container justify-center float gap-2 px-5 py-24 mx-auto lg:flex lg:flex-row-reverse">
@@ -68,6 +67,10 @@
     </div>
 </body>
 <script>
+    function fadeIn() {
+        setTimeout(function(){ document.body.style.opacity = 100; }, 100);
+        
+    }
     function shake() {
         const daftarBtn = document.getElementById("DaftarBtn");
         daftarBtn.remove();
