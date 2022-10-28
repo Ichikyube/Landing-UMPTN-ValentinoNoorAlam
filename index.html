@@ -12,6 +12,10 @@
 </head>
 
 <body onload="fadeIn()">
+    <div id="success" class="success w-full sticky top-0 justify-center text-white p-3 hidden text-center transition-all">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <p><strong>&#128151Terima Kasih&#128151</strong> Atas kesediaannya menjadi bagian dalam program kami&#10024</p>
+    </div>
     <div id="fadeIn"></div>
     <div class="container px-5 py-8 mx-auto items-center">
         <header id="header" class="px-5 py-24 mx-auto text-gray-600 body-font">
@@ -22,7 +26,7 @@
                         Teknologi Nasional </h1>
                     <h2 class="text-xs text-center text-grey-500 tracking-widest font-medium title-font mb-1">
                         Pendaftaran Ujian Masuk Perusahaan Teknologi Nasional Dibuka</h2>
-                </div><br><br>
+                </div><br>
                 <div id="Daftar" class="items-center text-center">
                     <button name="Daftar" id="DaftarBtn" onclick="shake()"
                         class="relative justify-center font-medium 2xl:px-6 2xl:py-3.5 rounded text-shadow
@@ -35,7 +39,7 @@
         </header>
 
         <section id="Content" class="container px-auto mx-auto flex justify-center flex-auto items-center">
-            <figure class="figure relative items-center content-center justify-center justify-items-center">
+            <figure class="figure relative">
                 <img src="img/i12.png"
                     class="w-full object-cover overflow-hidden sm:h-[468px] lg:h-[522px] mx-auto figure-img max-w-full h-auto place-self-center justify-self-center self-center rounded-lg"
                     alt="...">
@@ -109,6 +113,10 @@
             node.innerHTML = "Sudah Terdaftar";
         }, 600);
         document.getElementById("DaftarBtn2").innerHTML = "Sudah Terdaftar";
+        setTimeout(() => {
+            document.getElementById("success").classList.replace("hidden", "flex");
+        }, 600);
+
     }
 </script>
 
